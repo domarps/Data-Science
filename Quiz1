@@ -1,0 +1,19 @@
+The first quiz execute basic operations on objects in R and to understand some basic concepts.
+
+1. heisenberg <- read.csv("http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv")
+Explanation : Loading CSV Dataset into heisenberg.
+
+2.colnames(heisenberg)  
+Explanation : Duh!
+
+3.Ozone <- heisenberg[1:153,1], Temp <- heisenberg[1:153,4]
+Explanation : First Row, Ozone.
+
+4.TF <- is.na(Ozone)
+Explanation : TF is a vector of type boolean to store TRUE/FALSE values. returns TRUE if the value is NA.
+
+5.mean(heisenberg[, "Ozone"], na.rm = TRUE)
+Explanation : Mean of the "Ozone" column in this dataset, excluding missing values (coded as NA) from this calculation.
+
+6.subset(heisenberg, Ozone > 31 & Temp > 90)
+Explanation : Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. 
