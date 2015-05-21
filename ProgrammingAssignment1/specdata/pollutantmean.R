@@ -7,7 +7,7 @@
 
 
 setwd("/home/pramod/R Programming/")
-pollutantmean <- function(directory, pollutant, id) 
+pollutantmean <- function(directory, pollutant, id=1:332) 
 {
   
   #########################Problem Statement############################################################
@@ -18,7 +18,8 @@ pollutantmean <- function(directory, pollutant, id)
   ## Return the mean of the pollutant across all monitors list in the 'id' vector (ignoring NA values)
   ## pollutantmean(directory = "C:/Users/pramodsr/Documents/R Programming/specdata", pollutant = sulphate, id = 1:332)
   #########################Problem Statement############################################################
-  
+  if(missing(x))
+    x <- 1:332
   
   if(grep("specdata", directory) == 1) 
   {
